@@ -1,3 +1,4 @@
+import math
 import statistics
 def main():
     print("\nET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
@@ -40,9 +41,18 @@ def sort_temperature(temp_list):
     print(f"The sorted array list in ascending order is {temp_list}")
     return temp_list
 
-def calc_median_temperature(temp_list):
-    median = statistics.median(temp_list)
-    print(f"The median value is {median}")
+def calc_median_temperature(arr):
+    n = len(arr)
+    sorted_arr = sorted(arr)
+
+    if n % 2 != 0:
+        # If the length of the list is odd
+        median = sorted_arr[n // 2]
+    else:
+        # If the length of the list is even
+        median = (sorted_arr[(n // 2) - 1] + sorted_arr[n // 2]) / 2
+
+    print("The median is ", median)
     return median
 
 
