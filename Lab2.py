@@ -2,8 +2,10 @@ import math
 import statistics
 def main():
     print("\nET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+
     display_main_menu()
     temp_list = get_user_input()
+
     calc_average(temp_list)
     find_min_max(temp_list)
     sort_temperature(temp_list)
